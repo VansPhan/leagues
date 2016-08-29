@@ -3,17 +3,20 @@
 <head>
 	<meta charset="utf-8">
 	<script type="text/javascript" src="/aram/dependencies/angular.js"></script>
+	<script type="text/javascript" src="/aram/dependencies/jquery-3.1.0.min.js"></script>
 	<script type="text/javascript" src="/app.js"></script>
 	<script type="text/javascript" src="/aram/js/aram.js"></script>
 	<script type="text/javascript" src="/aram/js/aram.controller.js"></script>
 	<script type="text/javascript" src="/aram/js/aram.factory.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="style.css">
 	<title>ARAM</title>
 </head>
 <body>
 
 <div id="main" ng-controller="AramController">
 	<form ng-submit="getUser()">
-   	<input type="text" ng-model="input">
+   	<input type="text" ng-model="input" required>
    	<input type="submit" id="submit" value="Submit"></input>
   	</form>
 
