@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="leagues">
+<head>
+	<meta charset="utf-8">
+	<script type="text/javascript" src="/aram/dependencies/angular.js"></script>
+	<script type="text/javascript" src="/app.js"></script>
+	<script type="text/javascript" src="/aram/js/aram.js"></script>
+	<script type="text/javascript" src="/aram/js/aram.controller.js"></script>
+	<script type="text/javascript" src="/aram/js/aram.factory.js"></script>
+	<title>ARAM</title>
+</head>
+<body>
+
+<div id="main" ng-controller="AramController">
+	<form ng-submit="getUser()">
+   	<input type="text" ng-model="input">
+   	<input type="submit" id="submit" value="Submit"></input>
+  	</form>
+
+  	<div ng-repeat="user in user">
+  		<h1>{{ user.name }}</h1>
+  		<p>Level: {{ user.summonerLevel }}</p>
+  		<img src="http://ddragon.leagueoflegends.com/cdn/6.17.1/img/profileicon/{{ user.profileIconId }}.png">
+  	</div>
+</div>
+
+
+</body>
+</html>
