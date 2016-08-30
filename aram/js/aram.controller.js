@@ -7,6 +7,10 @@
 		])
 
 		function AramControllerFunction($scope, AramFactory) {
+			$scope.historySwitch = false;
+			$scope.toggleHistory = function() {
+				$scope.historySwitch = !$scope.historySwitch
+			}
 			AramFactory.items().success(function(data) {
 				$scope.items = data.data;
 			})

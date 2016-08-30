@@ -6,8 +6,9 @@
 		</div>
 		<img src="http://ddragon.leagueoflegends.com/cdn/6.17.1/img/profileicon/{{ user.profileIconId }}.png">
 		<div class="card-block">
-			<a href="#" class="card-link">Normal Games</a>
-			<a href="#" class="card-link">ARAM</a>
+			<a data-ng-click="toggleHistory()" href="" class="card-link">Recent Games</a>
 		</div>
 	</div>
 </div>
+
+<history ng-show="historySwitch"></history>
