@@ -11,5 +11,11 @@
       restrict: 'E',
       templateUrl: '/aram/templates/navbar.html'
     };
-  });
+  })
+  .directive('history', function() {
+    return {
+      restrict: 'E',
+      templateUrl: '/aram/templates/history.html'
+    };
+  })
 }());
