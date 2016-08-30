@@ -8,22 +8,48 @@
 	<script type="text/javascript" src="/aram/js/aram.js"></script>
 	<script type="text/javascript" src="/aram/js/aram.controller.js"></script>
 	<script type="text/javascript" src="/aram/js/aram.factory.js"></script>
-
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.3/js/bootstrap.min.js" integrity="sha384-ux8v3A6CPtOTqOzMKiuo3d/DomGaaClxFYdCu2HPMBEkf6x2xiDyJ7gkXU0MWwaD" crossorigin="anonymous"></script>
+	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.3/css/bootstrap.min.css" integrity="sha384-MIwDKRSSImVFAZCVLtU0LMDdON6KVCrZHyVQQj6e8wIEJkW4tvwqXrbMIya1vriY" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<title>ARAM</title>
 </head>
-<body>
-
-<div id="main" ng-controller="AramController">
-	<form ng-submit="getUser()">
-   	<input type="text" ng-model="input" required>
-   	<input type="submit" id="submit" value="Submit"></input>
+<body ng-controller="AramController">
+<nav class="navbar navbar-light bg-faded">
+	<a class="navbar-brand" href="/">ᶘ ᵒᴥᵒᶅ</a>
+	<ul class="nav navbar-nav">
+		<li class="nav-item">
+			<a class="nav-link" href="#">Home</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link" href="#">Features</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link" href="#">Pricing</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link" href="#">About</a>
+		</li>
+ 	</ul>
+	<form ng-submit="getUser()" class="form-inline pull-xs-right">
+   	<input class="form-control" type="text" ng-model="input" required>
+   	<input class="btn btn-outline-success" type="submit" id="submit" value="Search" ng-disabled="!input"></input>
   	</form>
-
+</nav>
+<div id="main">
+<span id="loading"></span>
   	<div ng-repeat="user in user">
-  		<h1>{{ user.name }}</h1>
-  		<p>Level: {{ user.summonerLevel }}</p>
-  		<img src="http://ddragon.leagueoflegends.com/cdn/6.17.1/img/profileicon/{{ user.profileIconId }}.png">
+		<div class="card text-xs-center">
+			<div class="card-block">
+				<h4 class="card-title">{{ user.name }}</h4>
+				<h6 class="card-subtitle text-muted">Level: {{ user.summonerLevel }}</h6>
+			</div>
+			<img src="http://ddragon.leagueoflegends.com/cdn/6.17.1/img/profileicon/{{ user.profileIconId }}.png">
+			<div class="card-block">
+				<a href="#" class="card-link">Normal Games</a>
+				<a href="#" class="card-link">ARAM</a>
+			</div>
+		</div>
   	</div>
 </div>
 
