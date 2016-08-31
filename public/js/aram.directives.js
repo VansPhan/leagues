@@ -3,31 +3,31 @@
   .directive('user', function() {
     return {
       restrict: 'E',
-      templateUrl: 'aram/templates/user.html'
+      templateUrl: 'assets/templates/user.html'
     };
   })
   .directive('navbar', function() {
     return {
       restrict: 'E',
-      templateUrl: 'aram/templates/navbar.html'
+      templateUrl: 'assets/templates/navbar.html'
     };
   })
   .directive('match', function() {
     return {
       restrict: 'E',
-      templateUrl: 'aram/templates/match.html'
+      templateUrl: 'assets/templates/match.html'
     };
   })
   .directive('landing', function() {
     return {
       restrict: 'E',
-      templateUrl: 'aram/templates/landing.html'
+      templateUrl: 'assets/templates/landing.html'
     };
   })
   .directive('history', function() {
     return {
       restrict: 'E',
-      templateUrl: 'aram/templates/history.html'
+      templateUrl: 'assets/templates/history.html'
     };
   })
 }());

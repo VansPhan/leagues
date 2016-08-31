@@ -1,0 +1,27 @@
+{
+  "name": "leagues",
+  "version": "1.0.0",
+  "description": "MEAN stack app for leagues of legends",
+  "main": "index.js",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "express-handlebars": "^3.0.0",
+    "hbs": "^4.0.0",
+    "mongoose": "^4.5.10"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VansPhan/leagues.git"
+  },
+  "author": "Van Phan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VansPhan/leagues/issues"
+  },
+  "homepage": "https://github.com/VansPhan/leagues#readme"
+}

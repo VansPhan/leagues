@@ -43,6 +43,7 @@
 				var name = $scope.input;
 				AramFactory.user(name)
 				.success(function(data) {
+					console.log(data)
 					$("#loading").html("");
 					$scope.user = data;
 					angular.forEach($scope.user, function(val, key) {
