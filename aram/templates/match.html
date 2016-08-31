@@ -1,16 +1,18 @@
 <div class="jumbotron jumbotron-fluid">
-	<div class="container">
-	<div class="row item">
+	<div class="container match">
+	<div class="row item pull-xs-left">
+		<span>{{ match.teams[0].winner ? "VICTORY" : "DEFEAT" }}</span>
 		<div ng-repeat="blue in blueTeam">
-	   	<div class="col pull-xs-left">
-	   		<img ng-src="https://ddragon.leagueoflegends.com/cdn/6.17.1/img/champion/{{ blue.championId }}">
+	   	<div>
+	   		<img class="icon" ng-src="https://ddragon.leagueoflegends.com/cdn/6.17.1/img/champion/{{ blue.championId }}">
 	   	</div>
 		</div>
 	</div>
-	<div class="row item">
+	<div class="row item pull-xs-right">
+		<span">{{ match.teams[1].winner ? "VICTORY" : "DEFEAT" }}</span>
 		<div ng-repeat="red in redTeam">
-	   	<div class="col pull-xs-right">
-	   		<img ng-src="https://ddragon.leagueoflegends.com/cdn/6.17.1/img/champion/{{ red.championId }}">
+	   	<div>
+	   		<img class="icon" ng-src="https://ddragon.leagueoflegends.com/cdn/6.17.1/img/champion/{{ red.championId }}">
 	   	</div>
 		</div>
 	</div>

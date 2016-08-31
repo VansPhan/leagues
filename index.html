@@ -21,6 +21,7 @@
 	<navbar></navbar>
 	<div class="container" id="main">
 		<span id="loading"></span>
+		<landing ng-show="landingSwitch"></landing>
 		<user></user>
 		<div class="content" ng-controller="MatchController">
 			<history ng-show="historySwitch"></history>

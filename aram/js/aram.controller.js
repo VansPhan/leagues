@@ -7,14 +7,18 @@
 		])
 
 		function AramControllerFunction($scope, AramFactory) {
+			$scope.landingSwitch = true;
+			$scope.toggleLanding = function() {
+				$scope.landingSwitch = false;
+			}
 			$scope.matchSwitch = false;
 			$scope.toggleMatch = function() {
-				$scope.matchSwitch = true
+				$scope.matchSwitch = true;
 			}
 			$scope.historySwitch = true;
 			$scope.toggleHistory = function() {
-				$scope.historySwitch = !$scope.historySwitch
-				$scope.matchSwitch = false
+				$scope.historySwitch = !$scope.historySwitch;
+				$scope.matchSwitch = false;
 			}
 			AramFactory.items().success(function(data) {
 				$scope.items = data.data;

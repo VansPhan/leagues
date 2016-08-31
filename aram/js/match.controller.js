@@ -7,11 +7,11 @@
 		])
 
 		function MatchControllerFunction($scope, AramFactory) {
-			$scope.blueTeam = [];
-			$scope.redTeam = [];
 			$scope.getMatch = function(id) {
 				AramFactory.match(id)
 				.success(function(data) {
+					$scope.blueTeam = [];
+					$scope.redTeam = [];
 					$scope.match = data;
 					angular.forEach($scope.match.participants, function(game, id) {
 						angular.forEach($scope.champions, function(val, key) {
@@ -26,6 +26,7 @@
 							$scope.redTeam.push(game)
 						}
 					})
+					console.log($scope.match)
 				})
 				.error(function() {
 					alert("Cannot find match");

@@ -18,6 +18,12 @@
       templateUrl: 'aram/templates/match.html'
     };
   })
+  .directive('landing', function() {
+    return {
+      restrict: 'E',
+      templateUrl: 'aram/templates/landing.html'
+    };
+  })
   .directive('history', function() {
     return {
       restrict: 'E',
