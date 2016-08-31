@@ -9,7 +9,7 @@ var UserSchema = new mongoose.Schema(
 
 mongoose.model("User", UserSchema);
 
-if(process.env.NODE_ENV == "production"){
+if(process.env.NODE_ENV == "development"){
   mongoose.connect(process.env.MONGOLAB_URI);
 }else{
 	mongoose.connect("mongodb://localhost/leagues");
