@@ -52,6 +52,6 @@ app.post("/api/users/:name", function(req, res){
   });
 });
 
-app.listen(app.get("port"), function(){
-  console.log("It's aliiive!");
+app.listen(process.env.PORT || 1337, function(){
+  console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
 });
