@@ -3,24 +3,24 @@
 		<div class="col-sm-6">
 		<div class="card">
 			<div class="card-header">
-				{{ game.gameMode }} | {{ game.createDate | date }}
+				{{ game.gameMode }} | {{ game.createDate | date }} <a href="" ng-click="toggleHistory(); toggleMatch(); getMatch(game.gameId)" class="card-text pull-xs-right" data-toggle="modal" data-target=".bd-example-modal-lg">Full Match</a>
 			</div>
 			<div class="card-block text-xs-center">
-				<img ng-src="http://ddragon.leagueoflegends.com/cdn/6.17.1/img/champion/{{ game.championId }}">
+				<img ng-src="https://ddragon.leagueoflegends.com/cdn/6.17.1/img/champion/{{ game.championId }}">
 				<br>
 				<p class="card-text">GAME {{ game.stats.win ? "WON" : "LOST" }} <br> IP Earned: {{ game.ipEarned }}</p>
-				<img ng-src="http://ddragon.leagueoflegends.com/cdn/6.17.1/img/spell/{{ game.spell1 }}">
-				<img ng-src="http://ddragon.leagueoflegends.com/cdn/6.17.1/img/spell/{{ game.spell2 }}">
+				<img ng-src="https://ddragon.leagueoflegends.com/cdn/6.17.1/img/spell/{{ game.spell1 }}">
+				<img ng-src="https://ddragon.leagueoflegends.com/cdn/6.17.1/img/spell/{{ game.spell2 }}">
 			</div>
 			<ul class="list-group list-group-flush">
 		   	<li class="list-group-item">
-		   		<img ng-if="game.stats.item0" ng-src="http://ddragon.leagueoflegends.com/cdn/6.17.1/img/item/{{ game.stats.item0 }}.png">
-		   		<img ng-if="game.stats.item1" ng-src="http://ddragon.leagueoflegends.com/cdn/6.17.1/img/item/{{ game.stats.item1 }}.png">
-		   		<img ng-if="game.stats.item2" ng-src="http://ddragon.leagueoflegends.com/cdn/6.17.1/img/item/{{ game.stats.item2 }}.png">
-		   		<img ng-if="game.stats.item3" ng-src="http://ddragon.leagueoflegends.com/cdn/6.17.1/img/item/{{ game.stats.item3 }}.png">
-		   		<img ng-if="game.stats.item4" ng-src="http://ddragon.leagueoflegends.com/cdn/6.17.1/img/item/{{ game.stats.item4 }}.png">
-		   		<img ng-if="game.stats.item5" ng-src="http://ddragon.leagueoflegends.com/cdn/6.17.1/img/item/{{ game.stats.item5 }}.png">
-		   		<img ng-if="game.stats.item6" ng-src="http://ddragon.leagueoflegends.com/cdn/6.17.1/img/item/{{ game.stats.item6 }}.png">
+		   		<img ng-if="game.stats.item0" ng-src="https://ddragon.leagueoflegends.com/cdn/6.17.1/img/item/{{ game.stats.item0 }}.png">
+		   		<img ng-if="game.stats.item1" ng-src="https://ddragon.leagueoflegends.com/cdn/6.17.1/img/item/{{ game.stats.item1 }}.png">
+		   		<img ng-if="game.stats.item2" ng-src="https://ddragon.leagueoflegends.com/cdn/6.17.1/img/item/{{ game.stats.item2 }}.png">
+		   		<img ng-if="game.stats.item3" ng-src="https://ddragon.leagueoflegends.com/cdn/6.17.1/img/item/{{ game.stats.item3 }}.png">
+		   		<img ng-if="game.stats.item4" ng-src="https://ddragon.leagueoflegends.com/cdn/6.17.1/img/item/{{ game.stats.item4 }}.png">
+		   		<img ng-if="game.stats.item5" ng-src="https://ddragon.leagueoflegends.com/cdn/6.17.1/img/item/{{ game.stats.item5 }}.png">
+		   		<img ng-if="game.stats.item6" ng-src="https://ddragon.leagueoflegends.com/cdn/6.17.1/img/item/{{ game.stats.item6 }}.png">
 		   	</li>
 		 	</ul>
 			<div class="card-footer text-muted">

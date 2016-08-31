@@ -36,6 +36,12 @@
 						url: "https://global.api.pvp.net/api/lol/static-data/na/v1.2/item?itemListData=image&api_key=d4095fd1-ec30-4403-8db7-fdacebef9b17",
 						method: "GET"
 					})
+				},
+				match: function(id) {
+					return $http({
+						url: "https://na.api.pvp.net/api/lol/na/v2.2/match/" + id + "?api_key=d4095fd1-ec30-4403-8db7-fdacebef9b17",
+						method: "GET"
+					})
 				}
 			}
 		}

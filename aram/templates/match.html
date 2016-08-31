@@ -1,0 +1,18 @@
+<div class="jumbotron jumbotron-fluid">
+	<div class="container">
+	<div class="row item">
+		<div ng-repeat="blue in blueTeam">
+	   	<div class="col pull-xs-left">
+	   		<img ng-src="https://ddragon.leagueoflegends.com/cdn/6.17.1/img/champion/{{ blue.championId }}">
+	   	</div>
+		</div>
+	</div>
+	<div class="row item">
+		<div ng-repeat="red in redTeam">
+	   	<div class="col pull-xs-right">
+	   		<img ng-src="https://ddragon.leagueoflegends.com/cdn/6.17.1/img/champion/{{ red.championId }}">
+	   	</div>
+		</div>
+	</div>
+	</div>
+</div>

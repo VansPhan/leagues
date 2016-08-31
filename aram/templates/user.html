@@ -4,11 +4,9 @@
 			<h4 class="card-title">{{ user.name }}</h4>
 			<h6 class="card-subtitle text-muted">Level: {{ user.summonerLevel }}</h6>
 		</div>
-		<img src="http://ddragon.leagueoflegends.com/cdn/6.17.1/img/profileicon/{{ user.profileIconId }}.png">
+		<img ng-src="https://ddragon.leagueoflegends.com/cdn/6.17.1/img/profileicon/{{ user.profileIconId }}.png">
 		<div class="card-block">
-			<a data-ng-click="toggleHistory()" href="" class="card-link">Recent Games</a>
+			<a ng-click="toggleHistory()" href="" class="card-link">Recent Games</a>
 		</div>
 	</div>
 </div>
-
-<history ng-show="historySwitch"></history>

@@ -7,9 +7,14 @@
 		])
 
 		function AramControllerFunction($scope, AramFactory) {
+			$scope.matchSwitch = false;
+			$scope.toggleMatch = function() {
+				$scope.matchSwitch = true
+			}
 			$scope.historySwitch = true;
 			$scope.toggleHistory = function() {
 				$scope.historySwitch = !$scope.historySwitch
+				$scope.matchSwitch = false
 			}
 			AramFactory.items().success(function(data) {
 				$scope.items = data.data;
@@ -67,7 +72,6 @@
 							}
 						})
 					})
-					console.log($scope.games);
 				})
 				.error(function() {
 					console.log("Cannot find history..");
