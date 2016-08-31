@@ -7,7 +7,7 @@ var app     = express();
 
 var User = mongoose.model("User");
 
-app.set("port", process.env.PORT);
+app.set("port", process.env.PORT || 1337);
 app.set("view engine", "hbs");
 app.engine(".hbs", hbs({
   extname:        ".hbs",
@@ -52,6 +52,6 @@ app.post("/api/users/:name", function(req, res){
   });
 });
 
-app.listen(process.env.PORT, function(){
+app.listen(process.env.PORT || 1337, function(){
   console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
 });

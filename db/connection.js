@@ -8,11 +8,10 @@ var UserSchema = new mongoose.Schema(
 );
 
 mongoose.model("User", UserSchema);
-mongoose.connect(process.env.MONGOLAB_URI);
-// if(process.env.NODE_ENV == "production"){
-//   mongoose.connect(process.env.MONGOLAB_URI);
-// }else{
-// 	mongoose.connect("mongodb://localhost/leagues");
-// }
+if(process.env.NODE_ENV == "production"){
+  mongoose.connect(process.env.MONGOLAB_URI);
+}else{
+	mongoose.connect("mongodb://localhost/leagues");
+}
 
 module.exports = mongoose;
