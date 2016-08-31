@@ -8,6 +8,7 @@
     "express": "^4.14.0",
     "express-handlebars": "^3.0.0",
     "hbs": "^4.0.0",
+    "mongodb": "^2.2.9",
     "mongoose": "^4.5.10"
   },
   "devDependencies": {},
