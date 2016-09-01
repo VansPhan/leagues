@@ -17,6 +17,7 @@ app.engine(".hbs", hbs({
 }));
 app.use("/assets", express.static("public"));
 app.use(parser.urlencoded({extended: true}));
+app.use(parser.json({extended: true}));
 
 app.get("/", function(req, res){
   res.render("index");
@@ -24,19 +25,32 @@ app.get("/", function(req, res){
 
 app.get("/api/users", function(req, res){
   User.find({}).then(function(users){
-    res.json({ users: users });
+    res.json({ users });
   });
 });
 
 app.get("/api/users/:name", function(req, res){
   User.findOne({name: req.params.name}).then(function(user){
-    res.json({ user: user });
+    res.json({ user });
   });
 });
 
 app.post("/api/users", function(req, res){
-  User.create(req.body.user).then(function(user){
-    res.redirect("/api/users/" + user.name);
+  User.find({}).then(function(users) {
+    var dupes = false;
+    for (var i = 0; i < users.length; i++) {
+      if (users[i].id == req.body.id) {
+        dupes = true;
+      }
+    }
+    if (dupes) {
+      console.log("User already exist")
+    }
+    else {
+      User.create(req.body).then(function(user) {
+        console.log(user)
+      });
+    }
   });
 });
 

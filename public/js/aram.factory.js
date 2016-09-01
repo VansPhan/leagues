@@ -13,6 +13,9 @@
 						method: "GET"
 					})
 				},
+				addUser: function(user) {
+					return $http.post("/api/users", user);
+				},
 				history: function(id) {
 					return $http({
 						url: "https://na.api.pvp.net/api/lol/na/v1.3/game/by-summoner/" + id + "/recent?api_key=d4095fd1-ec30-4403-8db7-fdacebef9b17",

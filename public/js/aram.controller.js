@@ -38,11 +38,16 @@
 			.error(function() {
 				console.log("Cannot find spells");
 			})
+			$scope.addUser = function(new_user, input_name) {
+				var obj = new_user[input_name.toLowerCase()];
+				AramFactory.addUser(obj)
+			}
 			$scope.getUser = function() {
 				$("#loading").html("Loading...");
 				var name = $scope.input;
 				AramFactory.user(name)
 				.success(function(data) {
+					$scope.addUser(data, name);
 					$("#loading").html("");
 					$scope.user = data;
 					angular.forEach($scope.user, function(val, key) {
